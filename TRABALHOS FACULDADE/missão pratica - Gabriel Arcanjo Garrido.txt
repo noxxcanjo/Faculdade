@@ -1,0 +1,48 @@
+Nome: Gabriel Arcanjo Garrido/Desenvolvedor Full Stack
+
+
+
+ATIVIDADE 01 - Abra o software Visalg para começar a rodar;
+Identifique os comandos condicionais, iterativos e operações de atribuição e
+aritméticas;
+Implemente o algoritmo para imprimir e somar todos os números primos menores ou
+iguais a um determinado número N;
+Realize os testes para o número 7 - no caso desse exemplo, a saída execução será: 17
+
+
+SOLUÇÃO:
+
+def verificar_primo(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def imprimir_e_somar_primos(N):
+    soma = 0
+    print("Números primos menores ou iguais a", N, ":")
+    for i in range(2, N + 1):
+        if verificar_primo(i):
+            print(i)
+            soma += i
+    print("Soma dos números primos:", soma)
+
+# Teste para N = 7
+N = 7
+imprimir_e_somar_primos(N)
+
+
+Números primos menores ou iguais a 7 :
+2
+3
+5
+7
+Soma dos números primos: 17
+
+
+
+
+
+
